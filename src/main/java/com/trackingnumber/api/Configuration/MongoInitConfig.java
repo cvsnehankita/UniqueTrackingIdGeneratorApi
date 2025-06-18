@@ -20,7 +20,6 @@ public class MongoInitConfig {
                 repository.save(new Country("AU", "Australia"));
                 repository.save(new Country("BR", "Brazil"));
                 repository.save(new Country("FR", "France"));
-                repository.save(new Country("CN", "China"));
                 repository.save(new Country("CZ", "Czechia"));
             }
         };

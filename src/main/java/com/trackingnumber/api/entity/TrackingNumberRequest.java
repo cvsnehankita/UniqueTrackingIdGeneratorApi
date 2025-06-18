@@ -60,4 +60,67 @@ public class TrackingNumberRequest {
 
     public TrackingNumberRequest() {
     }
+    public String getOriginCountryId() {
+        return originCountryId;
+    }
+
+    public void setOriginCountryId(String originCountryId) {
+        this.originCountryId = originCountryId;
+    }
+
+    public String getDestinationCountryId() {
+        return destinationCountryId;
+    }
+
+    public void setDestinationCountryId(String destinationCountryId) {
+        this.destinationCountryId = destinationCountryId;
+    }
+
+    public BigDecimal getWeight() {
+        return weight;
+    }
+
+    public void setWeight(BigDecimal weight) {
+        this.weight = weight;
+    }
+
+    public Instant  getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCustomerSlug() {
+        return customerSlug;
+    }
+
+    public void setCustomerSlug(String customerSlug) {
+        this.customerSlug = customerSlug;
+    }
 }

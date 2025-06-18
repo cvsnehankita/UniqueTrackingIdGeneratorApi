@@ -22,9 +22,9 @@ public class CountryService {
         return repository.save(request);
     }
 
-    public Country getCountryByCode(String countrCode) {
-        log.info("Getting country details for country code={}", repository.findByCountryCode(countrCode));
-        return repository.findByCountryCode(countrCode)
-                .orElseThrow(() -> new NoSuchElementException("Country code not found: " + countrCode));
+    public Country getCountryByCode(String countryCode) {
+        log.info("Getting country details for country code={}", countryCode);
+        return repository.findById(countryCode)
+                .orElseThrow(() -> new NoSuchElementException("Country code not found: " + countryCode));
     }
 }

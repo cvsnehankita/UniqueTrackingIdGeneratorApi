@@ -3,5 +3,5 @@ package com.trackingnumber.api.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CountryController {
+public class CountryController  {
 }

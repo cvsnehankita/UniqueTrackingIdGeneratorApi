@@ -6,9 +6,19 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.math.BigDecimal;
 import java.time.Instant;
 
+
+@Getter
+@Data
+@Setter
+@Document(collection = "tracking_requests")
 public class TrackingNumberRequest {
     private String requestId;
     @Size(min = 2, max = 2, message = "Origin country code must be 2 letters (ISO Alpha-2)")

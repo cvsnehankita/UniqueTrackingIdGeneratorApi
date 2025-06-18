@@ -6,9 +6,12 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
@@ -20,6 +23,8 @@ import java.time.Instant;
 @Setter
 @Document(collection = "tracking_requests")
 public class TrackingNumberRequest {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String requestId;
     @Size(min = 2, max = 2, message = "Origin country code must be 2 letters (ISO Alpha-2)")
     @Pattern(regexp = "^[A-Z]{2}$", message = "Origin country code must be uppercase ISO Alpha-2")

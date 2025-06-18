@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "bda7765b-bba9-48d5-8f25-1d0ad9bda5fe",
+		"name": "TrackingNumberApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13672047"
+	},
+	"item": [
+		{
+			"name": "nextTrackingNumberApi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://next-tracking-number",
+					"protocol": "https",
+					"host": [
+						"next-tracking-number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCountryDetailsHeroku",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tracking-number-generator-api-99e1a10ea1f9.herokuapp.com/country/get/IN",
+					"protocol": "https",
+					"host": [
+						"tracking-number-generator-api-99e1a10ea1f9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"country",
+						"get",
+						"IN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nextTrackingNumberApiLocal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/next-tracking-number?origin_country_id=IN&destination_country_id=US&weight=56&created_at=&customer_id=de619854-b59b-425e-9db4-943979e1bd49&customer_name=Neuron Network&customer_slug=neuron-network&created_by=Test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"next-tracking-number"
+					],
+					"query": [
+						{
+							"key": "origin_country_id",
+							"value": "IN"
+						},
+						{
+							"key": "destination_country_id",
+							"value": "US"
+						},
+						{
+							"key": "weight",
+							"value": "56"
+						},
+						{
+							"key": "created_at",
+							"value": ""
+						},
+						{
+							"key": "customer_id",
+							"value": "de619854-b59b-425e-9db4-943979e1bd49"
+						},
+						{
+							"key": "customer_name",
+							"value": "Neuron Network"
+						},
+						{
+							"key": "customer_slug",
+							"value": "neuron-network"
+						},
+						{
+							"key": "created_by",
+							"value": "Test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCountryDetailsLocal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/country/get/IN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"country",
+						"get",
+						"IN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCountryDetailsHeroku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"UK\",\r\n    \"countryName\": \"United Kingdom\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uniquetrackingnumberapi-bafed499ccdb.herokuapp.com/country/add",
+					"protocol": "https",
+					"host": [
+						"uniquetrackingnumberapi-bafed499ccdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"country",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCountryDetailsLocal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"UK\",\r\n    \"countryName\": \"United Kingdom\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/country/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"country",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
